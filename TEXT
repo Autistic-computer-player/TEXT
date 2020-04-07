@@ -1,0 +1,23 @@
+from Max import MaxSubArray
+import unittest
+class mytest(unittest.TestCase):
+    def setUp(self):
+        print('==============起始============')
+    def tearDown(self):
+        print('==============结束============')
+    def test1(self):
+        str1='-2 11 -4 13 -5 -2'
+        text=MaxSubArray(str1)
+        self.assertEqual(text,20)
+
+    def test2(self):
+        str1='-2 -11 -4 -13 -5 -2'
+        text=MaxSubArray(str1)
+        self.assertEqual(text, 0)
+
+    def test3(self):
+        str1=' -2 11 -4 13 -5 -2'
+        text=MaxSubArray(str1)
+        self.assertEqual(text, 20)
+if __name__ =='__main__':
+    unittest.main()
